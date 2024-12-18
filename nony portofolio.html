@@ -3,133 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nouran Amr Mohamed - Portfolio</title>
+    <title>Nouran Amr Mohamed | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f8e8;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #f4f7fb;
             color: #333;
         }
-        header {
-            background-color: #c49e85;
-            padding: 1rem;
-            text-align: center;
-            color: white;
-        }
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #5e4637;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: square;
-        }
         a {
-            color: #0066cc;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+
+        /* Header */
+        header {
+            background: #12192C;
+            color: #fff;
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
-        footer {
-            background-color: #c49e85;
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        header nav a {
+            color: #ddd;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #f4b400;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #12192C, #1E2A47);
+            color: #fff;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #f4b400;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .hero img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Buttons */
+        .btn {
+            background: #f4b400;
+            color: #12192C;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background: #f59e00;
+            transform: translateY(-5px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 8%;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .card {
+            flex: 1;
+            background: #fff;
+            padding: 30px;
             text-align: center;
-            padding: 1rem;
-            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #1E2A47;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 60px 8%;
+            background: #12192C;
+            color: #fff;
+            text-align: center;
+        }
+        .skills .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .skills .grid .skill-item {
+            background: #f4b400;
+            color: #12192C;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Projects */
+        .projects {
+            padding: 60px 8%;
+            text-align: center;
+        }
+        .projects .grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            flex: 1 1 calc(33% - 2rem);
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1E2A47;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #f4b400;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Nouran Amr Mohamed</h1>
-        <p>Business Analytics Student | Egyptian Russian University</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Contact Information</h2>
-            <p><strong>Mobile:</strong> (+2) 01211088989</p>
-            <p><strong>Email:</strong> <a href="mailto:amrnoran460@gmail.com">amrnoran460@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/noran-amr" target="_blank">linkedin.com/in/noran-amr</a></p>
-            <p><strong>Address:</strong> Maadi, Cairo, Egypt</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome, I'm Nouran!</h1>
+            <p>Business Analytics Student | Driven | Dedicated to Learning and Growth</p>
+            <a href="http://www.linkedin.com/in/noran-amr-614102288" class="btn">View My LinkedIn</a>
         </div>
+        <img src="noran.jpg" alt="Nouran Amr Mohamed">
+    </section>
 
-        <div class="section">
-            <h2>Personal Statement</h2>
-            <p>Hardworking student seeking internships to leverage resources and networking opportunities, engage in cutting-edge research, and gain hands-on experience. Bringing forth a positive attitude and motivation to learn new skills.</p>
-        </div>
-
-        <div class="section">
+    <!-- Features -->
+    <section class="features">
+        <div class="card">
             <h2>Education</h2>
-            <ul>
-                <li><strong>Egyptian Russian University</strong> (2021 &ndash; 2025)<br>B.Sc. in Business Analytics | Year 3, GPA: 3.41</li>
-                <li><strong>Aliaa Private School</strong> (2008 &ndash; 2021)</li>
-            </ul>
+            <p>Egyptian Russian University (2021-2025)</p>
         </div>
-
-        <div class="section">
-            <h2>Work Experience & Projects</h2>
-            <ul>
-                <li>Analyzed the impact of immigration on university life and psychological well-being using SPSS.</li>
-                <li>Created dynamic dashboards for retail performance using Excel and Power BI.</li>
-                <li>Developed car rental systems and Uber-inspired systems using SQL and SDLC methodology.</li>
-                <li>Analyzed datasets like "Cardiovascular Disease" and "World Values Survey 2018" using Python.</li>
-                <li>Performed predictive modeling for car prices and lead conversion using R programming.</li>
-                <li>Optimized production for Khalifa's Dairy Products using Excel Solver.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>C++, Java, Python, R</li>
-                <li>Data Analysis</li>
-                <li>Office 365</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Certificates</h2>
-            <p>Maat for Peace, Development, and Human Rights (2021)</p>
-        </div>
-
-        <div class="section">
+        <div class="card">
             <h2>Languages</h2>
-            <ul>
-                <li>Arabic &ndash; Mother Language</li>
-                <li>English &ndash; Fluent</li>
-                <li>Russian &ndash; A1</li>
-            </ul>
+            <p>Arabic, English, Russian</p>
         </div>
-
-        <div class="section">
-            <h2>Strengths</h2>
-            <ul>
-                <li>Excellent Communication Skills</li>
-                <li>Hard Working</li>
-            </ul>
+        <div class="card">
+            <h2>Certificates</h2>
+            <p>Math for Peace, ITI BI Development</p>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Drawing</li>
-            </ul>
+    <!-- Skills -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="grid">
+            <div class="skill-item">C++</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">SPSS</div>
+            <div class="skill-item">Excel</div>
+            <div class="skill-item">Power BI</div>
         </div>
-    </div>
+    </section>
 
+    <!-- Projects -->
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="project-card">
+                <h3>Optimized Production System</h3>
+                <p>Developed an optimized system for Khalifa Dairy Products.</p>
+            </div>
+            <div class="project-card">
+                <h3>Car Price Prediction</h3>
+                <p>Built predictive models for car prices using data analysis techniques.</p>
+            </div>
+            <div class="project-card">
+                <h3>Performance Dashboards</h3>
+                <p>Created dashboards for performance insights with Excel & Power BI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Nouran Amr Mohamed | All Rights Reserved</p>
+        <p>Follow me: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        <p>&copy; 2024 Nouran Amr Mohamed. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
