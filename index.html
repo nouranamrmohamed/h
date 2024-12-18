@@ -74,6 +74,45 @@
         .team-member a:hover {
             background-color: #3a2215;
         }
+        .qna-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f5f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .qna-section h2 {
+            font-size: 1.8em;
+            color: #4b2e19;
+            margin-bottom: 20px;
+        }
+        .qna-section input, .qna-section button {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
+        .qna-section input {
+            width: 70%;
+        }
+        .qna-section button {
+            background-color: #4b2e19;
+            color: #fff;
+            cursor: pointer;
+        }
+        .qna-section button:hover {
+            background-color: #3a2215;
+        }
+        .qna-section .answer {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -132,5 +171,51 @@
             <a href="CV%20Reem%20EL-Houby.pdf" target="_blank">View CV</a>
         </div>
     </div>
+
+    <!-- Question and Answer Section -->
+    <div class="qna-section">
+        <h2>Have a Question? Ask Us!</h2>
+        <input type="text" id="question" placeholder="Type your question here...">
+        <button onclick="answerQuestion()">Ask</button>
+        <div class="answer" id="answer"></div>
+    </div>
+
+    <script>
+        function answerQuestion() {
+            const question = document.getElementById('question').value.toLowerCase();
+            const answerElement = document.getElementById('answer');
+
+            // Example answers - you can expand this logic
+            const answers = {
+                'who are you?': 'We are a team of Business Analytics students from the Egyptian Russian University.',
+                'what is business analytics?': 'Business analytics involves analyzing data to make informed business decisions.',
+                'how can i join your team?': 'You can contact any team member through their portfolio link for collaboration.',
+                'what year are you in?': 'We are currently in our 4th year of study.',
+                'what is the egyptian russian university?': 'It is a university offering diverse programs in Egypt, with Russian collaboration.',
+                'who is noran amr?': 'Noran Amr is a 4th-year Business Analytics student at the Egyptian Russian University.',
+                'who is berbara romany?': 'Berbara Romany is a dedicated and talented Business Analytics major in her 4th year at the Egyptian Russian University.',
+                'who is mariam abdelhamid?': 'Mariam Abdelhamid is a 4th-year Business Analytics student with a passion for data and technology.',
+                'who is reem ibrahim?': 'Reem Ibrahim is a committed 4th-year student majoring in Business Analytics at the Egyptian Russian University.',
+                'what are your projects?': 'We work on various projects in data analysis, business solutions, and technology integration.',
+                'can you help me with analytics?': 'Yes, feel free to reach out through our portfolios for collaboration opportunities.',
+                'how to contact you?': 'Use the portfolio links provided for each team member to get in touch.',
+                'what is your team goal?': 'Our goal is to master business analytics and provide innovative solutions.',
+                'what programming languages do you use?': 'We use Python, R, SQL, and other analytics tools for our work.',
+                'what tools do you use for analytics?': 'We use tools like Tableau, Power BI, Excel, and Google Analytics.',
+                'what is your main area of focus?': 'Our focus is on data-driven decision-making and business solutions.',
+                'do you work with companies?': 'Yes, we are open to collaborations with companies and organizations.',
+                'what are your future plans?': 'We aim to expand our skills and contribute to the analytics industry after graduation.',
+                'what courses have you studied?': 'We have studied courses in business analytics, data science, economics, and management.'
+                'Hello' : 'Hi! How can we help you.'
+                'Hi' : 'Hi! How can we help you.'
+                'hello' : 'Hi! How can we help you.'
+                'hi' : 'Hi! How can we help you.'
+                'what is your name' : 'We are Nouran, Mariam, Reem, and Berbara.' 
+            };
+
+            // Provide an answer or fallback response
+            answerElement.textContent = answers[question] || 'Sorry, I don\'t have an answer to that question right now. Please ask another question!';
+        }
+    </script>
 </body>
 </html>
