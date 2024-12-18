@@ -3,163 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Portfolio - Business & Analytics</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8c1c6, #ffecb3, #b3e5fc);
+            background-attachment: fixed;
             color: #333;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
         header {
             text-align: center;
-            padding: 40px 10px;
-            background-color: #fff;
+            padding: 60px 20px;
+            background: #ffffff;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
-            color: #3b82f6;
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #ff6f61;
         }
+
         header h2 {
-            font-size: 2em;
-            color: #f59e0b;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #42a5f5;
         }
+
         header p {
-            margin: 20px auto;
-            font-size: 1em;
+            font-size: 1.1em;
             max-width: 600px;
-            color: #666;
+            margin: 0 auto;
+            color: #555;
         }
-        nav {
-            margin: 20px;
-            text-align: center;
-        }
-        nav a {
-            color: #3b82f6;
+
+        .social-links a {
             margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.2em;
+            color: #ff6f61;
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
         }
-        section {
-            padding: 40px 10%;
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* About Me */
+        .about-me {
             background-color: #fff;
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 30px;
             text-align: center;
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .about-me, .skills, .services, .projects {
-            margin: 40px auto;
-        }
+
         .about-me img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #ff6f61;
         }
-        .skills .skill-bar {
-            margin: 10px auto;
-            width: 100%;
-            max-width: 400px;
+
+        .about-me h2 {
+            font-size: 2em;
+            color: #42a5f5;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            color: #ff6f61;
+        }
+
+        .skill {
+            display: inline-block;
+            width: 40%;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .skill p {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .skill-bar {
+            height: 15px;
             background-color: #ddd;
             border-radius: 10px;
             overflow: hidden;
         }
-        .skills .skill-bar span {
-            display: block;
-            height: 20px;
-            background-color: #3b82f6;
+
+        .skill-fill {
+            height: 100%;
+            background-color: #42a5f5;
         }
-        .services div {
-            display: inline-block;
-            width: 30%;
-            margin: 10px;
-            padding: 20px;
-            background-color: #f1f1f1;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
-        .projects img {
-            width: 30%;
-            height: auto;
-            margin: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
+
+        /* Projects */
+        .projects {
             text-align: center;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 40px;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects h2 {
+            font-size: 2em;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        .project-card {
+            display: inline-block;
+            width: 250px;
+            margin: 15px;
             padding: 20px;
-            background-color: #3b82f6;
-            color: white;
+            background: #ffecb3;
+            border-radius: 10px;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1em;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Hi, I'm [Berbara Romany]</h1>
-        <h2>Business and Analytics Enthusiast</h2>
-        <p>Currently studying at Russian University (2021-Present), living in Cairo, Egypt.</p>
-        <p>I work on lead conversion, logistic regression, SVM, market basket analysis, interactive KPI dashboards, and production optimization.</p>
-        <nav>
-            <a href="http://linkedin.com/in/berbara-romany">LinkedIn</a>
-            <a href="berbararomany45@gmail.com">Contact</a>
-        </nav>
+        <h1>Hi, I'm Berbara Romany </h1>
+        <h2>Business & Analytics Enthusiast</h2>
+        <p>Student at Russian University (2021-Present) | Based in Cairo, Egypt.<br>
+        Passionate about predictive analysis, dashboards, and optimization.</p>
+        <div class="social-links">
+            <a href="linkedin.com/in/berbara-romany
+292a422b3" target="_blank">🔗 LinkedIn</a>
+        </div>
     </header>
 
     <!-- About Me -->
     <section class="about-me">
-        <h2>About Me</h2>
         <img src="berry.jpg" alt="Profile Photo">
-        <p>I’m passionate about data, analysis, and creating solutions that make a difference. My strengths include teamwork, hard work, and excellent communication skills.</p>
+        <h2>About Me</h2>
+        <p>I'm passionate about solving business challenges with data. My expertise includes logistic regression, SVM, and building interactive KPI dashboards.</p>
+        <p>Strengths: Teamwork, hard work, and communication.</p>
+        <p>Languages: Arabic & English | Hobbies: Reading 📚</p>
     </section>
 
     <!-- Skills -->
     <section class="skills">
         <h2>My Skills</h2>
-        <div class="skill-bar">
+        <div class="skill">
             <p>C++</p>
-            <span style="width: 80%;"></span>
+            <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
         </div>
-        <div class="skill-bar">
-            <p>Java</p>
-            <span style="width: 75%;"></span>
-        </div>
-        <div class="skill-bar">
+        <div class="skill">
             <p>Python</p>
-            <span style="width: 90%;"></span>
+            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
         </div>
-        <div class="skill-bar">
-            <p>Office 365</p>
-            <span style="width: 85%;"></span>
+        <div class="skill">
+            <p>Java</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
         </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services">
-        <h2>What I Do</h2>
-        <div>
-            <h3>Data Analysis</h3>
-            <p>Market Basket Analysis, Predictive Models</p>
-        </div>
-        <div>
-            <h3>Lead Conversion</h3>
-            <p>Logistic Regression, SVM</p>
-        </div>
-        <div>
-            <h3>KPI Dashboards</h3>
-            <p>Interactive Reports</p>
+        <div class="skill">
+            <p>Office 365 Analysis</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
         </div>
     </section>
 
     <!-- Projects -->
     <section class="projects">
         <h2>My Projects</h2>
-        <img src="project1.jpg" alt="Project 1">
-        <img src="project2.jpg" alt="Project 2">
-        <img src="project3.jpg" alt="Project 3">
+        <div class="project-card">
+            <h3>Lead Conversion</h3>
+            <p>Built logistic regression and SVM models to optimize production.</p>
+        </div>
+        <div class="project-card">
+            <h3>Market Basket Analysis</h3>
+            <p>Optimized product recommendations through analysis.</p>
+        </div>
+        <div class="project-card">
+            <h3>Interactive KPI Dashboard</h3>
+            <p>Created a visually interactive dashboard using Excel.</p>
+        </div>
+        <div class="project-card">
+            <h3>World Happiness Report</h3>
+            <p>Analyzed global data with predictive Python models.</p>
+        </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>Languages: Arabic & English | Hobbies: Reading | <a href="#">LinkedIn</a></p>
-    </footer>
 </body>
 </html>
