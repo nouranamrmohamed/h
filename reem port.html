@@ -3,135 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reem Ibrahim El-Houby - Portfolio</title>
+    <title>Reem Ibrahim Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f8e8;
-            color: #333;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2d3b2d;
+            color: #fdfcf8;
+        }
+
         header {
-            background-color: #c49e85;
-            padding: 1rem;
-            text-align: center;
-            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1b1f1b;
         }
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
+
+        header h1 {
+            font-size: 32px;
+            color: #f3b533;
         }
-        h1, h2 {
-            color: #5e4637;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: square;
-        }
-        a {
-            color: #0066cc;
+
+        header nav a {
+            color: #fdfcf8;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #3e4b3e;
+            color: #fdfcf8;
         }
+
+        .hero img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #f3b533;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        section h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #f3b533;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1b1f1b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #f3b533;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .skills, .hobbies {
+            padding: 20px;
+            background-color: #3e4b3e;
+            border-radius: 10px;
+        }
+
+        .skills ul, .hobbies ul {
+            list-style: none;
+        }
+
+        .skills ul li, .hobbies ul li {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
         footer {
-            background-color: #c49e85;
             text-align: center;
-            padding: 1rem;
-            color: white;
+            padding: 20px;
+            background-color: #1b1f1b;
+            color: #fdfcf8;
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact a {
+            color: #f3b533;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Reem Ibrahim El-Houby</h1>
-        <p>Business Analytics Student | Egyptian Russian University</p>
+        <h1>Reem Ibrahim</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Contact Information</h2>
-            <p><strong>Mobile:</strong> (+20) 1211199195</p>
-            <p><strong>Email:</strong> <a href="mailto:reemelhouby21@gmail.com">reemelhouby21@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/reem-el-houby-58aa16268" target="_blank">linkedin.com/in/reem-el-houby-58aa16268</a></p>
-            <p><strong>Address:</strong> New Cairo, Cairo, Egypt</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hello, I'm Reem!</h2>
+            <p>I am a passionate business analyst currently in my final year at the Egyptian Russian University. With a strong foundation in data analysis, programming, and business, I strive to create impactful solutions. Explore my portfolio to learn more about my journey!</p>
         </div>
+        <img src="reem.jpg" alt="Reem Ibrahim">
+    </section>
 
-        <div class="section">
-            <h2>Objective</h2>
-            <p>Seeking knowledge and experience to become successful in professional life.</p>
-        </div>
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I am a business analyst based in Egypt with expertise in Python, C++, and SQL. I am fluent in English and Russian and have strong communication and presentation skills. Beyond work, I enjoy crocheting, crafting, reading, and exploring photography.</p>
+    </section>
 
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Egyptian Russian University</strong> (2021 &ndash; Present)<br>B.Sc. in Business Analytics | Third Level, CGPA: 3.40</li>
-                <li><strong>Zoser Prince’s Language School</strong> (2018 &ndash; 2021)</li>
-                <li><strong>Pyramids Language School</strong> (2007 &ndash; 2018)</li>
-            </ul>
+    <section id="education">
+        <h3>Education</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Egyptian Russian University</h4>
+                <p>Business Analysis (2021 - Present)</p>
+            </div>
+            <div class="card">
+                <h4>Zoser Princess Language School</h4>
+                <p>High School Diploma (2018 - 2021)</p>
+            </div>
+            <div class="card">
+                <h4>Pyramids Language School</h4>
+                <p>Primary and Secondary Education (2007 - 2018)</p>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: C++, Python, SQL</li>
-                <li>Data Analysis</li>
-                <li>Adobe Photoshop</li>
-                <li>Microsoft Office 365</li>
-                <li>Communication and Presentation Skills</li>
-            </ul>
+    <section id="experience">
+        <h3>Experience</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Future Employee</h4>
+                <p>Digital Era Training Program, Commercial International Bank (2023)</p>
+            </div>
+            <div class="card">
+                <h4>Orange</h4>
+                <p>Training Program Participant (2024)</p>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Future Employee for the Digital Era - Summer Training Program (2023)</strong><br>Commercial International Bank (CIB)</li>
-            </ul>
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Library Management System</h4>
+                <p>Developed a comprehensive system for efficient library operations.</p>
+            </div>
+            <div class="card">
+                <h4>Immigration Impact Analysis</h4>
+                <p>Conducted a study on the impact of immigration on university life.</p>
+            </div>
+            <div class="card">
+                <h4>Dashboard Development</h4>
+                <p>Created dashboards in Excel and Power BI for actionable insights.</p>
+            </div>
+            <div class="card">
+                <h4>Market Basket Analysis</h4>
+                <p>Performed data analysis and developed predictive models using Python.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Developed a library management system using C++ for efficient book inventory and borrowing management.</li>
-                <li>Conducted a study on the impact of immigration on university life and psychological well-being using SPSS.</li>
-                <li>Designed and implemented a mini library system using Java, employing object-oriented programming techniques.</li>
-                <li>Created dashboards in Excel to analyze retail performance and real-time data visualization.</li>
-                <li>Utilized Power BI to create dashboards analyzing customer revenue and profitability trends.</li>
-                <li>Developed a car rental system using SDLC methodology and SQL for database management.</li>
-                <li>Analyzed "Cardiovascular Disease" dataset using Python for risk factor identification and data visualization.</li>
-                <li>Explored "World Values Survey 2018" dataset focusing on corruption in Egypt using Python.</li>
-                <li>Performed market basket analysis using Python to optimize product placement in retail stores.</li>
-                <li>Created predictive models for car pricing using R, employing linear regression and LASSO regression.</li>
-            </ul>
+    <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid">
+            <div class="card skills">
+                <h4>Technical Skills</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>SQL</li>
+                    <li>Microsoft Office 365</li>
+                    <li>Data Analysis</li>
+                    <li>Photoshop</li>
+                </ul>
+            </div>
+            <div class="card hobbies">
+                <h4>Hobbies & Interests</h4>
+                <ul>
+                    <li>Crocheting</li>
+                    <li>Crafting</li>
+                    <li>Reading</li>
+                    <li>Learning Languages</li>
+                    <li>Photography</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li>Arabic: Native</li>
-                <li>English: Fluent (C1)</li>
-                <li>Russian: Basic (A2)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Learning languages</li>
-                <li>Photography</li>
-                <li>Crafting</li>
-                <li>Reading</li>
-            </ul>
-        </div>
-    </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Reem Ibrahim El-Houby. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/reem-el-houby-58aa16268">LinkedIn</a></p>
     </footer>
 </body>
 </html>
