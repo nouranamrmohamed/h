@@ -1,123 +1,165 @@
-<!-- Berbara Romany Portfolio -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berbara Romany - Portfolio</title>
+    <title>Your Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8e8;
+            background-color: #f8f8f8;
             color: #333;
         }
         header {
-            background-color: #c49e85;
-            padding: 1rem;
             text-align: center;
-            color: white;
+            padding: 40px 10px;
+            background-color: #fff;
         }
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
+        header h1 {
+            color: #3b82f6;
+            font-size: 2.5em;
         }
-        h1, h2 {
-            color: #5e4637;
+        header h2 {
+            font-size: 2em;
+            color: #f59e0b;
         }
-        .section {
-            margin-bottom: 20px;
+        header p {
+            margin: 20px auto;
+            font-size: 1em;
+            max-width: 600px;
+            color: #666;
         }
-        ul {
-            list-style-type: square;
+        nav {
+            margin: 20px;
+            text-align: center;
         }
-        a {
-            color: #0066cc;
+        nav a {
+            color: #3b82f6;
+            margin: 0 10px;
             text-decoration: none;
+            font-size: 1.2em;
         }
-        a:hover {
-            text-decoration: underline;
+        section {
+            padding: 40px 10%;
+            background-color: #fff;
+            text-align: center;
+        }
+        .about-me, .skills, .services, .projects {
+            margin: 40px auto;
+        }
+        .about-me img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .skills .skill-bar {
+            margin: 10px auto;
+            width: 100%;
+            max-width: 400px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .skills .skill-bar span {
+            display: block;
+            height: 20px;
+            background-color: #3b82f6;
+        }
+        .services div {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .projects img {
+            width: 30%;
+            height: auto;
+            margin: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
         }
         footer {
-            background-color: #c49e85;
             text-align: center;
-            padding: 1rem;
+            padding: 20px;
+            background-color: #3b82f6;
             color: white;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Berbara Romany</h1>
-        <p>Business Analytics Student | Egyptian Russian University</p>
+        <h1>Hi, I'm [Berbara Romany]</h1>
+        <h2>Business and Analytics Enthusiast</h2>
+        <p>Currently studying at Russian University (2021-Present), living in Cairo, Egypt.</p>
+        <p>I work on lead conversion, logistic regression, SVM, market basket analysis, interactive KPI dashboards, and production optimization.</p>
+        <nav>
+            <a href="http://linkedin.com/in/berbara-romany">LinkedIn</a>
+            <a href="berbararomany45@gmail.com">Contact</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Contact Information</h2>
-            <p><strong>Mobile:</strong> (+2) 01289119940</p>
-            <p><strong>Email:</strong> <a href="mailto:berbararomany45@gmail.com">berbararomany45@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="http://linkedin.com/in/berbara-romany" target="_blank">linkedin.com/in/berbara-romany</a></p>
-            <p><strong>Address:</strong> Cairo, Egypt</p>
-        </div>
+    <!-- About Me -->
+    <section class="about-me">
+        <h2>About Me</h2>
+        <img src="berry.jpg" alt="Profile Photo">
+        <p>I’m passionate about data, analysis, and creating solutions that make a difference. My strengths include teamwork, hard work, and excellent communication skills.</p>
+    </section>
 
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Egyptian Russian University</strong> (2021 &ndash; Present)<br>B.Sc. in Business Analytics | Year 4</li>
-            </ul>
+    <!-- Skills -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-bar">
+            <p>C++</p>
+            <span style="width: 80%;"></span>
         </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Predictive Modeling for Car Pricing using R.</li>
-                <li>Lead Conversion Prediction using Logistic Regression and SVM.</li>
-                <li>Market Basket Analysis for Retail Optimization using Python.</li>
-                <li>Interactive KPIs Dashboard in Power BI.</li>
-                <li>Production Optimization at Khalifa's Dairy Products using Excel Solver.</li>
-                <li>World Happiness Report Analysis using Python.</li>
-            </ul>
+        <div class="skill-bar">
+            <p>Java</p>
+            <span style="width: 75%;"></span>
         </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>C++, Java, Python, R</li>
-                <li>Data Analysis</li>
-                <li>Office 365</li>
-            </ul>
+        <div class="skill-bar">
+            <p>Python</p>
+            <span style="width: 90%;"></span>
         </div>
-
-        <div class="section">
-            <h2>Strengths</h2>
-            <ul>
-                <li>Teamwork</li>
-                <li>Hard Working</li>
-                <li>Excellent Communication Skills</li>
-            </ul>
+        <div class="skill-bar">
+            <p>Office 365</p>
+            <span style="width: 85%;"></span>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li>Arabic &ndash; Mother Language</li>
-                <li>English &ndash; Fluent</li>
-            </ul>
+    <!-- Services -->
+    <section class="services">
+        <h2>What I Do</h2>
+        <div>
+            <h3>Data Analysis</h3>
+            <p>Market Basket Analysis, Predictive Models</p>
         </div>
-
-        <div class="section">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-            </ul>
+        <div>
+            <h3>Lead Conversion</h3>
+            <p>Logistic Regression, SVM</p>
         </div>
-    </div>
+        <div>
+            <h3>KPI Dashboards</h3>
+            <p>Interactive Reports</p>
+        </div>
+    </section>
 
+    <!-- Projects -->
+    <section class="projects">
+        <h2>My Projects</h2>
+        <img src="project1.jpg" alt="Project 1">
+        <img src="project2.jpg" alt="Project 2">
+        <img src="project3.jpg" alt="Project 3">
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Berbara Romany | All Rights Reserved</p>
+        <p>Languages: Arabic & English | Hobbies: Reading | <a href="#">LinkedIn</a></p>
     </footer>
 </body>
 </html>
